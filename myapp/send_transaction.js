@@ -39,3 +39,19 @@ async function sendNotexCoin(amount, receiverAddress) {
 
   console.log('Transaction sent:', txHash);
 }
+
+async function checkNotexCoinBalance() {
+  // Connect to Metamask wallet
+  const provider = window.ethereum;
+  const web3 = new Web3(provider);
+
+  // Set the contract address
+  const contractAddress = '0x123456789abcdef'; // Replace with your Notex Coin contract address
+
+  // Retrieve the user's Notex Coin balance
+  const notexCoinContract = new web3.eth.Contract(NotexCoinABI, contractAddress);
+  const userAddress = await web3.eth.getCoinbase();
+  const userBalance = await notexCoinContract.methods.balanceOf(userAddress).call();
+
+  console.log('Notex Coin balance:', web3.utils.fromWei(userBalance, 'ether'));
+}
