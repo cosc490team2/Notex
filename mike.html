@@ -164,31 +164,33 @@ body::before{
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function () {
-	    fs = require('fs'); 
-	    fs.appendFileSync('pics/message.txt', ']');
-            $.getJSON('pics/message.txt', function (jsonData) {
+       $(document).ready(function () {
+    fs = require('fs');
+    fs.appendFileSync('pics/message.txt', ']');
 
-                // iterate over the array to create cards
-                $.each(jsonData, function (key, value) {
-				var parts = value.path.split('/');
-				var name = parts[parts.length - 1];
-            	//var lastUrlElem = urlArr.pop();
-            	var cardHtml = '<li class="animals">' +
-                '<div class="card">' +
-                '<div class="card-header"><b>' + name + '</b></div>' +
-                '<div class="card-body">' +
-               // '<a href="'+ value.path + '" class="btn btn-primary">'+ ' Button </a>' +
-			   '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' Button </a>' +
+    // Read the file and remove the ']' character at the end
+    var jsonData = JSON.parse(fs.readFileSync('pics/message.txt', 'utf8').replace(/\]/g, ''));
 
-                '</div>' +
-                '</div>' +
-                '<br>' +
-                '</li>';
-            $('#name-list').append(cardHtml);
-                });
-            });
-        });
+    // iterate over the array to create cards
+    $.each(jsonData, function (key, value) {
+        var parts = value.path.split('/');
+        var name = parts[parts.length - 1];
+        var cardHtml = '<li class="animals">' +
+            '<div class="card">' +
+            '<div class="card-header"><b>' + name + '</b></div>' +
+            '<div class="card-body">' +
+            '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' Button </a>' +
+            '</div>' +
+            '</div>' +
+            '<br>' +
+            '</li>';
+        $('#name-list').append(cardHtml);
+    });
+
+    // Add the ']' character back to the file
+    fs.appendFileSync('pics/message.txt', ']');
+});
+
 
 
 		function checkBalance(path)
