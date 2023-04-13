@@ -20,6 +20,7 @@ var storage =   multer.diskStorage({
   }  
 });  
 var upload = multer({ storage : storage}).single('myfile'); 
+var coin_balance=0.0;
 
 async function startMoralis()
 {
@@ -35,8 +36,23 @@ async function getWalletBalance()
     address,
     chain,
   });
-  
-  console.log(response.toJSON());
+  const jsonstr = JSON.stringify(response.toJSON());
+  console.log(jsonstr);
+  const indBalance = jsonstr.lastIndexOf("balance");
+  const indNum = indBalance+10;
+  const balanceStr = jsonstr.substring(indNum,indNum+20);
+  coin_balance =parseFloat(balanceStr);
+  coin_balance = coin_balance/Math.pow(10,18);
+
+  const content = " "+coin_balance.toString();
+
+  fs.writeFile('pics/current.txt', content, err => {
+    if (err) {
+      console.error(err);
+    }});
+
+  console.log(balanceStr);
+  console.log(coin_balance);
 }
 
 async function uploadToIpfs(filename) {
@@ -60,7 +76,8 @@ async function uploadToIpfs(filename) {
   var s = JSON.stringify(response.result).trim()
   s= s.substring(1,s.length-1)
   console.log(s)
-  fs.appendFile('message.txt',','+ s, function (err) {
+
+  fs.appendFile('pics/message.txt',','+ s, function (err) {
     if (err) throw err;
     console.log('Saved!');
   });
@@ -70,7 +87,7 @@ async function uploadToIpfs(filename) {
 
 
 app.use(express.static(__dirname, { // host the whole directory
-    extensions: ["html", "htm", "gif", "png"],
+    extensions: ["html", "htm", "gif", "png", "txt"],
 }))
 
 app.get("/", (req, res) => {
@@ -79,7 +96,16 @@ app.get("/", (req, res) => {
     startedMoralis = true;
     getWalletBalance();
   }
-res.sendFile(__dirname + "/upload.html")
+  if(coin_balance!=0)
+  res.sendFile(__dirname + "/upload.html",{"coin_balance":coin_balance});
+  else
+  res.sendFile(__dirname + "/upload.html");
+
+})
+
+app.get("/landin2", (req, res) => {
+  
+  res.sendFile(__dirname + "/mike.html");
 
 })
 
@@ -101,6 +127,6 @@ return res.sendStatus(404)
 })
 
 
-const server = app.listen(3000, () => { // create a HTTP server on port 3000
+const server = app.listen(8080, () => { // create a HTTP server on port 3000
   console.log(`Express running → PORT ${server.address().port}`)
   });
