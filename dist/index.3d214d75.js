@@ -142,7 +142,11 @@
       this[globalName] = mainExports;
     }
   }
+<<<<<<< HEAD
 })({"8BXtR":[function(require,module,exports) {
+=======
+})({"edpQo":[function(require,module,exports) {
+>>>>>>> temp
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -628,7 +632,11 @@ const MetaMaskClientCheck = ()=>{
 };
 MetaMaskClientCheck();
 
+<<<<<<< HEAD
 },{"@metamask/onboarding":"gSj9U","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gSj9U":[function(require,module,exports) {
+=======
+},{"@metamask/onboarding":"gSj9U","@parcel/transformer-js/src/esmodule-helpers.js":"5lbmB"}],"gSj9U":[function(require,module,exports) {
+>>>>>>> temp
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _bowser = require("bowser");
@@ -974,7 +982,11 @@ var Onboarding = /** @class */ function() {
 }();
 exports.default = Onboarding;
 
+<<<<<<< HEAD
 },{"bowser":"5jYCf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5jYCf":[function(require,module,exports) {
+=======
+},{"bowser":"5jYCf","@parcel/transformer-js/src/esmodule-helpers.js":"5lbmB"}],"5jYCf":[function(require,module,exports) {
+>>>>>>> temp
 !function(e, t) {
     module.exports = t();
 }(this, function() {
@@ -2439,7 +2451,11 @@ exports.default = Onboarding;
     });
 });
 
+<<<<<<< HEAD
 },{}],"gkKU3":[function(require,module,exports) {
+=======
+},{}],"5lbmB":[function(require,module,exports) {
+>>>>>>> temp
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2469,6 +2485,10 @@ exports.export = function(dest, destName, get) {
     });
 };
 
+<<<<<<< HEAD
 },{}]},["8BXtR","bB7Pu"], "bB7Pu", "parcelRequirebbb8")
+=======
+},{}]},["edpQo","bB7Pu"], "bB7Pu", "parcelRequire6d67")
+>>>>>>> temp
 
 //# sourceMappingURL=index.3d214d75.js.map

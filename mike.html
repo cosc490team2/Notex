@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Names</title>
+<!-- ADDING BOOTSTRAP CSS -->
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"   href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!--bootstrap icons-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+</head>
+
+<script>
+
+// JavaScript code 
+function search_animal() { 
+	let input = document.getElementById('searchbar').value 
+	input=input.toLowerCase(); 
+	let x = document.getElementsByClassName('animals'); 	  
+	for (i = 0; i < x.length; i++) {  
+		if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+		x[i].style.display="none"; 
+		} 
+		else { 
+		x[i].style.display="list-item";                  
+		} 
+		} 
+}   
+	  
+</script>
+
+<style>
+
+
+@media(min-width:768px){
+    .news-input{
+        width: 50%;
+    }
+}
+/*ghost element to push down main content*/
+body::before{
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+	.main {
+	text-align: center;
+	margin: 2rem;
+}
+  
+  /* what you need */
+  
+  #searchbar{ 
+
+	   margin-left: 2%; 
+	   padding:8px; 
+	   border-radius: 10px; 
+	   
+} 
+   
+  
+	 input[type=text] { 
+		width: 30%; 
+		-webkit-transition: width 0.15s ease-in-out; 
+		transition: width 0.15s ease-in-out; 
+} 
+   
+	 /* When the input field gets focus, 
+		  change its width to 100% */
+	 input[type=text]:focus { 
+	   width: 70%; 
+} 
+   
+	#list{ 
+	  list-style-type: none;
+} 
+   
+  .animals{ 
+	 display: list-item;     
+	}  
+</style>  
+
+<body style="background-color: #0275d8;">
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+	<div class="container">
+		<a href="#" class="navbar-brand">Notex</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle
+		="collapse" data-bs-target="#navmenu">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id = "navmenu">
+
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="/">Upload</a>
+				</li>
+			</ul>
+		  <ul class="navbar-nav ms-auto">
+			
+			<li class="nav-item" href="#">
+				<a href="#" class="nav-link lead" id="balanceToCheck"> 16.5 <img src="pics/coin.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				  </a>
+			   </li>
+			
+		  </ul>      
+		  <input id="searchbar" onkeyup="search_animal()" type="text"
+		  name="search" placeholder="Search..." size="200">
+	
+		  </form>
+		</div>
+	</div>
+</nav>
+<!-- Showcase-->
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"><!--padding 5 all around-->
+	<div class="container">
+		<div class="d-sm-flex align-items-center justify-content-between"> <!--Flex box to show side by side, sm for normal display on small screens-->
+			<div>
+				<h1>Share Notes, earn <span class="text-warning">NTX</span></h1>
+				<p class="lead my-4"> <!--class lead for bigger text, my4 margin on y axis 4-->
+				   Building world's largest Blockchain based note sharing system for universiry students across Globe. It is easy to start, upload your notes or review other's notes and earn Notex. Then use notex to access any notes from anywhere in the world!
+				  </p>
+				  <!--Modal  on button click-->
+				
+			</div>
+			<img class="img-fluid w-50 d-none d-sm-block" src="pics/notex_clear.png" alt=""> <!--img fluid for size to be bound to the container, w50 for 50% size-->
+		</div>
+	</div>
+</section>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <ul class="list-group" id="name-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ADDING JQUERY AND BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $.getJSON('pics/message.txt', function (jsonData) {
+
+                // iterate over the array to create cards
+                $.each(jsonData, function (key, value) {
+				var parts = value.path.split('/');
+				var name = parts[parts.length - 1];
+            	//var lastUrlElem = urlArr.pop();
+            	var cardHtml = '<li class="animals">' +
+                '<div class="card">' +
+                '<div class="card-header"><b>' + name + '</b></div>' +
+                '<div class="card-body">' +
+               // '<a href="'+ value.path + '" class="btn btn-primary">'+ ' Button </a>' +
+			   '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' Button </a>' +
+
+                '</div>' +
+                '</div>' +
+                '<br>' +
+                '</li>';
+            $('#name-list').append(cardHtml);
+                });
+            });
+        });
+
+
+		function checkBalance(path)
+		{
+			if(parseFloat(document.getElementById("balanceToCheck").innerText)>=1)
+				window.location.href = path;
+			else
+				alert("Not enough coins! Head over to the Upload or Review page to earn more!")
+
+		}
+
+    </script>
+</body>
+</html>
