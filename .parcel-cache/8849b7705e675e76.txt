@@ -1,4 +1,4 @@
-8983
+8988
 166C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@ethersproject\bignumber\lib.esm\fixednumber.d.ts133258535127233128 0
 154C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\lmdb\dependencies\lz4\lib\dll\example133258533954420721 1
 137C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\tslib\tslib.es6.html133258533996131685 0
@@ -68,7 +68,7 @@
 184C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\myapp\node_modules\transformers\node_modules\uglify-js\test\compress\issue-59.js133258535091166468 0
 122C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\alert133258535199055832 1
 134C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\raw-body\index.js133258535342516545 0
-108C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist133258535378999231 1
+108C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist133258537639596483 1
 125C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\escalade133258533933428027 1
 136C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\keccak\package.json133258535316506142 0
 162C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\caniuse-lite\data\features\permissions-api.js133258533860552141 0
@@ -1290,6 +1290,7 @@
 121C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\svgo133258533986371718 1
 141C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\buffer-xor\test\index.js133258535215124752 0
 138C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\mdn-data\css\index.js133258533961140661 0
+131C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\review.6c604765.js.map133258537639486512 0
 145C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\myapp\node_modules\http-errors\index 2.js133258535053427420 0
 139C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\ordered-binary\LICENSE133258533971429197 0
 126C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\term-size133258533990491679 1
@@ -7549,6 +7550,7 @@
 142C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@parcel\core\lib\index.js133258533729529301 0
 151C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@parcel\core\lib\InternalConfig.js133258533728179277 0
 153C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@parcel\core\lib\loadParcelPlugin.js133258533729679277 0
+128C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\review.e5980c4e.css133258537636046496 0
 164C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@ethersproject\constants\lib.esm\strings.js.map133258535134093132 0
 151C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@parcel\core\lib\PackagerRunner.js133258533728259280 0
 143C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\node_modules\@parcel\core\lib\Parcel.js133258533728349322 0
@@ -8982,3 +8984,6 @@
 131C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\index.e5980c4e.css.map133258526769401143 0
 119C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\index.html133258535378240680 0
 132C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\noteX_logo.44962202.png133258533707056360 0
+127C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\review.6c604765.js133258537639226519 0
+132C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\review.e5980c4e.css.map133258537636366492 0
+120C:\Users\zeyad\Dropbox\My PC (LAPTOP-1BHP0S7R)\Desktop\UBC\Third Year\Term 2\COSC490 - Blockchain\Notex\dist\review.html133258537637356502 0
