@@ -214,7 +214,7 @@ fs.readFile('mike.html', 'utf8', (err, data) => {
   '<script>'+
   ''+
   'function search_animal() { '+
-  '	let input = document.getElementById(\'searchbar\').value '+
+  '	let input = document.getElementById(\'searchbar\').value; '+
   '	input=input.toLowerCase(); '+
   '	let x = document.getElementsByClassName(\'animals\'); 	  '+
   '	for (i = 0; i < x.length; i++) {  '+
