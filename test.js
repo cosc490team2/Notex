@@ -213,7 +213,6 @@ fs.readFile('mike.html', 'utf8', (err, data) => {
   ''+
   '<script>'+
   ''+
-  '// JavaScript code '+
   'function search_animal() { '+
   '	let input = document.getElementById(\'searchbar\').value '+
   '	input=input.toLowerCase(); '+
