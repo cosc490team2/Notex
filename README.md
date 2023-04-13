@@ -9,7 +9,8 @@ Notex is an innovative and decentralized note-sharing platform designed specific
 
 <a id="Installation"></a>
 ### Installation
-To install Notex, you will need to have Node.js and npm installed on your computer. Once you have those installed, follow these steps:
+To install Notex, you will need to have Node.js and npm installed on your computer. Here is the link to install: https://nodejs.org/en/download
+Once you have those installed, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
 ```bash
