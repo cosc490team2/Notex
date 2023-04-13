@@ -1,3 +1,4 @@
+![Logo](pics/notex_back.png)
 # Notex
 Notex is an innovative and decentralized note-sharing platform designed specifically for students. It is currently running on the Sepolia TestNet and offers its users a unique way to share their notes with their peers while also incentivizing them to engage in the process. The platform has its own cryptocurrency called "NTX", which is minted for students who publish their notes on the platform and review their peers' notes before publishing. This creates a self-sustaining ecosystem where students are rewarded for contributing to the platform's growth and quality. With its focus on collaboration and incentivization, Notex has the potential to revolutionize the way students share and learn from each other's notes.
 
