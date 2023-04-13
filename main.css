@@ -84,3 +84,13 @@ p {
     display: none;
 }
 
+.headers {
+    background: rgb(36,50,76);
+    padding: .2em;
+    border-radius: .3em;
+    position: relative;
+    display: inline-block;
+    text-indent: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(247,210,55);
+}

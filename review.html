@@ -7,23 +7,43 @@
     <title>NoteX</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<h1 style="text-align: center; -webkit-text-fill-color: aliceblue;">Review Document</h1>
+<h1 class = "headers" style="text-align: center; -webkit-text-fill-color: aliceblue;">Documents To Review</h1>
 <body>
-    <ul id="references-list"></ul>
+    <div class="onboard-container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <ul class="list-group" id="name-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Define the URL of the JSON file
-        const jsonUrl = "message.json";
-        
-        // Load and parse the JSON file
-        fetch(jsonUrl)
-          .then(response => response.json())
-          .then(data => {
-    // Loop through the array and log the "link" attribute for each object
-    data.forEach(item => {
-        console.log(item.link)
-    });
-    
-  })
-          .catch(error => console.error(error));
-      </script>
+        $(document).ready(function () {
+
+            $.getJSON('pics/message.txt', function (jsonData) {
+
+                // iterate over the array to create cards
+                $.each(jsonData, function (key, value) {
+				var parts = value.path.split('/');
+				var name = parts[parts.length - 1];
+            	//var lastUrlElem = urlArr.pop();
+            	var cardHtml = '<li class="animals">' +
+                '<div class="card">' +
+                '<div class="card-header"><b>' + name + '</b></div>' +
+                '<div class="card-body">' +
+               // '<a href="'+ value.path + '" class="btn btn-primary">'+ ' Button </a>' +
+			   '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' Button </a>' +
+
+                '</div>' +
+                '</div>' +
+                '<br>' +
+                '</li>';
+            $('#name-list').append(cardHtml);
+                });
+            });
+        });
+
+    </script>
 </body>
