@@ -7,6 +7,7 @@ Notex is an innovative and decentralized note-sharing platform designed specific
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [License](#License)
+- [Team Members](#members)
 
 <a id="Installation"></a>
 ### Installation
@@ -46,6 +47,13 @@ This will start the app on your local machine, and you can access it by opening 
 
 Once you're in, you can connect your MetaMask wallet and will then be redirected to the main page. The main page contains all the recent notes published 
 as well as a few buttons to navigate to the "About", "Upload", and "Review" sections. Your current NXT balance will also be displayed on the top right corner. Right next to the NXT balance is a search bar for looking up specific files.
+
+<a id = "members"></a>
+### Team Members
+- Zeyad
+- Andela
+- Anirudh
+- Manjot
 
 <a id = "License"></a>
 ### License
