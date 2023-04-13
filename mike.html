@@ -117,7 +117,12 @@ body::before{
 		  <ul class="navbar-nav ms-auto">
 			
 			<li class="nav-item" href="/landin2">
-				<a href="#" class="nav-link lead" id="balanceToCheck"> 16.5 --> <img src="pics/coin.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				<a href="#" class="nav-link lead" id="balanceToCheck"> 16.5 --> 
+				  </a>
+			   </li>
+
+			   <li class="nav-item" href="#">
+				<a href="#" class="nav-link lead" id="balanceToCheck"> <img src="pics/coin.png" width="30" height="30" class="d-inline-block align-top" alt="">
 				  </a>
 			   </li>
 			
@@ -188,7 +193,12 @@ body::before{
 		function checkBalance(path)
 		{
 			if(parseFloat(document.getElementById("balanceToCheck").innerText)>=1)
-				window.location.href = path;
+				{
+					
+					document.getElementById("balanceToCheck").innerText = (parseFloat(document.getElementById("balanceToCheck").innerText)-1);
+					//window.location.href = path;
+					window.open(path);
+				}
 			else
 				alert("Not enough coins! Head over to the Upload or Review page to earn more!")
 
