@@ -166,7 +166,9 @@ body::before{
     <script>
         $(document).ready(function () {
 
-            $.getJSON('pics/message.txt', function (jsonData) {
+            $.getJSON('pics/message2.txt', function (jsonData) {
+			
+
 
                 // iterate over the array to create cards
                 $.each(jsonData, function (key, value) {
@@ -178,7 +180,7 @@ body::before{
                 '<div class="card-header"><b>' + name + '</b></div>' +
                 '<div class="card-body">' +
                // '<a href="'+ value.path + '" class="btn btn-primary">'+ ' Button </a>' +
-			   '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' Button </a>' +
+			   '<a href="javascript:checkBalance(\''+ value.path+'\');" class="btn btn-primary">'+ ' View </a>' +
 
                 '</div>' +
                 '</div>' +

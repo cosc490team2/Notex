@@ -413,7 +413,7 @@ fs.readFile('rate.html', 'utf8', (err, data) => {
   '	}  '+
   '</style>  '+
   ''+
-  '<body onload="setTimeout(loadingFunc,10000);" style="background-color: #0275d8;">'+
+  '<body onload="setTimeout(loadingFunc,60000);" style="background-color: #0275d8;">'+
   ''+
   '<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">'+
   '	<div class="container">'+
@@ -440,8 +440,8 @@ fs.readFile('rate.html', 'utf8', (err, data) => {
   '		  <ul class="navbar-nav ms-auto">'+
   '			'+
   '			<li class="nav-item" href="/landin2">'+
-  '				<a href="#" class="nav-link lead" id="balanceToCheck"> '
-  +coin_balance+
+  '				<a href="#" class="nav-link lead" id="balanceToCheck">0.5 '
+  +
      data;
   res.send(data)
 
