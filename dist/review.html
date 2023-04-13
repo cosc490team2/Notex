@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteX</title>
+    <link rel="stylesheet" href="/review.e5980c4e.css">
+</head>
+<h1 style="text-align: center; -webkit-text-fill-color: aliceblue">Review Document</h1>
+<body>
+    <ul id="references-list"></ul>
+    <script>// Define the URL of the JSON file
+const jsonUrl = "message.json";
+// Load and parse the JSON file
+fetch(jsonUrl).then((response)=>response.json()).then((data)=>{
+    // Loop through the array and log the "link" attribute for each object
+    data.forEach((item)=>{
+        console.log(item.link);
+    });
+}).catch((error)=>console.error(error));
+
+</script>
+<script src="/review.6c604765.js"></script></body></html>
