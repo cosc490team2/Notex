@@ -1,9 +1,43 @@
 {
+<<<<<<< HEAD
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+=======
+  "name": "notex",
+  "version": "1.0.0",
+  "description": "---",
+>>>>>>> temp
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+<<<<<<< HEAD
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "@metamask/onboarding": "^1.0.1",
+    "parcel": "^2.8.3"
+=======
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosc490team2/Notex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosc490team2/Notex/issues"
+  },
+  "homepage": "https://github.com/cosc490team2/Notex#readme",
+  "dependencies": {
+    "@metamask/onboarding": "^1.0.1",
     "alert": "^5.1.4",
     "express": "^4.18.2",
     "formidable": "^2.1.1",
     "moralis": "^2.18.2",
     "multer": "^1.4.5-lts.1"
+>>>>>>> temp
   }
 }
