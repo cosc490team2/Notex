@@ -1,0 +1,229 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Names</title>
+
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"   href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+</head>
+
+
+
+<style>
+
+
+@media(min-width:768px){
+    .news-input{
+        width: 50%;
+    }
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+	.main {
+	text-align: center;
+	margin: 2rem;
+}
+  
+
+  
+ 
+   
+  
+	 input[type=text] { 
+		width: 30%; 
+		-webkit-transition: width 0.15s ease-in-out; 
+		transition: width 0.15s ease-in-out; 
+} 
+   
+	
+	 input[type=text]:focus { 
+	   width: 70%; 
+} 
+   
+	#list{ 
+	  list-style-type: none;
+} 
+   
+  .animals{ 
+	 display: list-item;     
+	}  
+</style>  
+
+<body onload="setTimeout(loadingFunc,10000);" style="background-color: #0275d8;">
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+	<div class="container">
+		<a href="/landin2" class="navbar-brand">Notex</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle
+		="collapse" data-bs-target="#navmenu">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id = "navmenu">
+
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="/">Upload</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/howto">About</a>
+				  </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/review2">Review</a>
+            </li>
+			</ul>
+		  <ul class="navbar-nav ms-auto">
+			
+			<li class="nav-item" href="/landin2">
+				<a href="#" class="nav-link lead" id="balanceToCheck"> 16.5  -->
+        </a>
+      </li>
+
+      <li class="nav-item" href="#">
+     <a href="#" class="nav-link lead" id="balanceToCheck"> <img src="pics/coin.png" width="30" height="30" class="d-inline-block align-top" alt="">
+       </a>
+      </li>
+   
+   </ul>      
+
+   </form>
+ </div>
+</div>
+</nav>
+<section id="instructors" class="p-5 bg-warning">
+  <div class="container">
+      <h2 class="text-center "> Review Notes</h2>
+      <p class="lead text-center mb-1"> Earn 1 NTX for every 3 files reviewed! You will have to wait 1 minute to make sure that files are reviewed and then you can check the boxes for files you think are valid.</p>
+      <p class="lead text-center  mb-3"> Review criteria: Notes have to be either hand written or typed and can't include any copyrighted material.</p>
+      </div>
+</section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <ul class="list-group" id="name-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ADDING JQUERY AND BOOTSTRAP JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+function makeInvisible()
+{
+  //document.getElementById("name-list").style.visibility = "hidden";
+
+  if(document.getElementById("myCheck0").disabled)
+    alert("You have to wait for 60s");
+  else
+  {
+    document.getElementById("name-list").innerHTML ='<li class="animals">' +
+            '<div class="card">' +
+            '<div class="card-header"><b>Congrats!</b></div>' +
+            '<div class="card-body">' +
+            
+            '<p id="text" >You have successfully uploaded and earned 1 NTX!</p>'+
+            '</div>'+
+            '</div>' +
+            '<br>' +
+            '</li>'; 
+  document.getElementById("balanceToCheck").innerText=(parseFloat(document.getElementById("balanceToCheck").innerText)+1);
+  }
+
+  
+}
+    
+function loadingFunc()
+{
+    var checkbox = document.getElementById("myCheck0");
+    checkbox.disabled = false;
+    checkbox = document.getElementById("myCheck1");
+    checkbox.disabled = false;
+    checkbox = document.getElementById("myCheck2");
+    checkbox.disabled = false;
+}
+function updateNumber() {
+    // get the checkbox element
+    var checkbox = document.getElementById("myCheck");
+    
+    // get the number span element
+    var numberSpan = document.getElementById("number");
+    
+    // use ternary operator to check if checkbox is checked
+    if (checkbox.checked) {
+        // disable checkbox for 60 seconds
+        checkbox.disabled = true;
+        setTimeout(function() {
+            checkbox.disabled = false;
+        }, 60000);
+        
+        // increment count by 10
+        numberSpan.innerText = parseInt(numberSpan.innerHTML) + 10;
+    } else {
+        // decrement count by 10
+        numberSpan.innerText = parseInt(numberSpan.innerHTML) - 10;
+    }
+}
+
+var counter = 0;
+$.getJSON('point.txt', function (jsonData) {
+            // iterate over the array to create cards
+            $.each(jsonData, function (key, value) {
+                if(counter<3)
+		    {var parts = value.path.split('/');
+		    var name = parts[parts.length - 1];
+            //var lastUrlElem = urlArr.pop();
+            var cardHtml = '<li class="animals">' +
+            '<div class="card">' +
+            '<div class="card-header"><b>' + name + '</b></div>' +
+            '<div class="card-body">' +
+            '<a target=”_blank” href="'+ value.path + '" class="btn btn-primary">'+ ' View </a> &ensp;' +
+            '<label for="myCheck'+counter+'">Valid? &ensp;</label>' +
+            '<input type="checkbox" id="myCheck'+counter+'" onclick="updateNumber()" disabled>'+
+            '<p id="text" style="display:none">Checkbox is CHECKED!</p>'+
+            '</div>'+
+            '</label>'+
+            '</div>' +
+            '<br>' +
+            '</li>';
+        $('#name-list').append(cardHtml);    
+        counter++;    
+            }
+    });
+
+});
+
+
+</script>
+
+<div class="container text-center pb-3">
+  <a href="javascript:makeInvisible()" class="btn btn-warning">Submit </a>
+</div>
+
+</body>
+</html>

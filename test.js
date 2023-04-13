@@ -149,6 +149,10 @@ fs.readFile('upload.html', 'utf8', (err, data) => {
           '<li class="nav-item">'+
             '<a class="nav-link" href="/howto">About</a>'+
             '</li>'+
+
+            '<li class="nav-item">'+
+'            <a class="nav-link" href="/review2">Review</a>'+
+'            </li>'+
         '</ul>'+
                '<ul class="navbar-nav ms-auto"> '+
                    
@@ -300,6 +304,9 @@ fs.readFile('mike.html', 'utf8', (err, data) => {
   '				<li class="nav-item">'+
   '					<a class="nav-link" href="/howto">About</a>'+
   '				  </li>'+
+  '<li class="nav-item">'+
+'            <a class="nav-link" href="/review2">Review</a>'+
+'            </li>'+
   '			</ul>'+
   '		  <ul class="navbar-nav ms-auto">'+
   '			'+
@@ -320,6 +327,127 @@ fs.readFile('mike.html', 'utf8', (err, data) => {
 app.get("/howto", (req, res) => {
   
   res.sendFile(__dirname + "/howto.html");
+
+})
+
+app.get("/review2", (req, res) => {
+  if(!startedMoralis) 
+  {startMoralis();
+    startedMoralis = true;
+    getWalletBalance();
+  }
+
+fs.readFile('rate.html', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  data = '<!DOCTYPE html>'+
+  '<html lang="en">'+
+  '<head>'+
+  '<meta charset="UTF-8">'+
+  '<title>Names</title>'+
+  ''+
+  ''+
+  '<meta charset="UTF-8">'+
+  '    <meta http-equiv="X-UA-Compatible" content="IE=edge">'+
+  '    <meta name="viewport" content="width=device-width, initial-scale=1.0">'+
+  '    <link rel="stylesheet" type="text/css"   href="/style.css">'+
+  '    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">'+
+  '    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>'+
+  '    '+
+  ''+
+  '    <link'+
+  '    rel="stylesheet"'+
+  '    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"'+
+  '  />'+
+  ''+
+  '<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">'+
+  '</script>'+
+  '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">'+
+  '</script>'+
+  '</head>'+
+  ''+
+  ''+
+  ''+
+  '<style>'+
+  ''+
+  ''+
+  '@media(min-width:768px){'+
+  '    .news-input{'+
+  '        width: 50%;'+
+  '    }'+
+  '}'+
+  'body::before{'+
+  '    display: block;'+
+  '    content: \'\';'+
+  '    height: 60px;'+
+  '}'+
+  ''+
+  '	.main {'+
+  '	text-align: center;'+
+  '	margin: 2rem;'+
+  '}'+
+  '  '+
+  '  '+
+  ' '+
+  '   '+
+  '  '+
+  '	 input[type=text] { '+
+  '		width: 30%; '+
+  '		-webkit-transition: width 0.15s ease-in-out; '+
+  '		transition: width 0.15s ease-in-out; '+
+  '} '+
+  '   '+
+  '	'+
+  '	 input[type=text]:focus { '+
+  '	   width: 70%; '+
+  '} '+
+  '   '+
+  '	#list{ '+
+  '	  list-style-type: none;'+
+  '} '+
+  '   '+
+  '  .animals{ '+
+  '	 display: list-item;     '+
+  '	}  '+
+  '</style>  '+
+  ''+
+  '<body onload="setTimeout(loadingFunc,10000);" style="background-color: #0275d8;">'+
+  ''+
+  '<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">'+
+  '	<div class="container">'+
+  '		<a href="/landin2" class="navbar-brand">Notex</a>'+
+  '		<button class="navbar-toggler" type="button" data-bs-toggle'+
+  '		="collapse" data-bs-target="#navmenu">'+
+  '		<span class="navbar-toggler-icon"></span>'+
+  '		</button>'+
+  '	'+
+  '		<div class="collapse navbar-collapse" id = "navmenu">'+
+  ''+
+  '			<ul class="navbar-nav mr-auto">'+
+  '				<li class="nav-item">'+
+  '				  <a class="nav-link" href="/">Upload</a>'+
+  '				</li>'+
+  '				<li class="nav-item">'+
+  '					<a class="nav-link" href="/howto">About</a>'+
+  '				  </li>'+
+  ''+
+  '          <li class="nav-item">'+
+  '            <a class="nav-link" href="/review2">Review</a>'+
+  '            </li>'+
+  '			</ul>'+
+  '		  <ul class="navbar-nav ms-auto">'+
+  '			'+
+  '			<li class="nav-item" href="/landin2">'+
+  '				<a href="#" class="nav-link lead" id="balanceToCheck"> '
+  +coin_balance+
+     data;
+  res.send(data)
+
+});
+  
+  //res.sendFile(__dirname + "/rate.html");
 
 })
 app.post('/uploadjavatpoint',function(req,res){ 
@@ -379,6 +507,9 @@ app.post('/uploadjavatpoint',function(req,res){
             '<li class="nav-item">'+
               '<a class="nav-link" href="/howto">About</a>'+
               '</li>'+
+              '<li class="nav-item">'+
+'            <a class="nav-link" href="/review2">Review</a>'+
+'            </li>'+
           '</ul>'+
                  '<ul class="navbar-nav ms-auto"> '+
                      
